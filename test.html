@@ -4,66 +4,313 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Бесплатный тест — Виктория Арден</title>
-<link rel="stylesheet" href="style.css?v=1790992092">
-<script src="config.js?v=1790992092"></script>
+<link rel="stylesheet" href="style.css?v=1790997800">
+<script src="config.js?v=1790997800"></script>
 <style>
-body{background:var(--dark);color:#efe6d8;min-height:100vh}
-.q{max-width:640px;margin:0 auto;padding:40px 20px 80px}
-.q .logo{text-align:center;margin-bottom:40px}
-.bar{height:2px;background:#33291f;margin-bottom:34px}
-.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
-.q h1{font-size:clamp(32px,6vw,44px);text-align:center;margin-bottom:16px}
-.q .sub{text-align:center;color:#c4b49c;margin-bottom:34px}
-.q .step{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.q h2{font-size:clamp(26px,4.6vw,34px);margin-bottom:26px;color:#efe6d8}
-.opt{display:block;width:100%;text-align:left;background:#211913;color:#efe6d8;border:1px solid #3a2f26;padding:18px 20px;margin-bottom:12px;font:inherit;font-size:16px;cursor:pointer;border-radius:2px;transition:border-color .15s,background .15s}
-.opt:hover{border-color:var(--gold);background:#2a2018}
-.res .type{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,6vw,48px);color:var(--gold2);line-height:1.05;margin:6px 0 20px}
-.res p{color:#d6c8b3;margin-bottom:14px}
-.res .box{border:1px solid var(--gold);padding:26px;margin:30px 0 10px;background:#1d1611}
-.res .box h3{font-size:28px;margin-bottom:8px}
-.res .center{text-align:center}
-.res .small{font-size:13px;color:#a59683;margin-top:14px;text-align:center}
-.res .pk{border:1px solid #3a2f26;padding:26px;margin:18px 0 10px;background:#211913}
-.res .pk .eyebrow{margin-bottom:8px}
-.res .pk h3{font-size:28px;margin-bottom:10px;color:#efe6d8}
-.res .pk ul{list-style:none;margin:14px 0 18px}
-.res .pk li{padding:9px 0 9px 30px;position:relative;border-top:1px solid #33291f;color:#d6c8b3;font-size:15px}
-.res .pk li b{color:#efe6d8;font-weight:600}
-.res .pk li:before{content:'';position:absolute;left:4px;top:18px;width:12px;height:1px;background:var(--gold)}
-.res .pk .wk{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #3a2f26;margin:6px 0 18px;text-align:center}
-.res .pk .wk div{padding:12px 6px;border-left:1px solid #3a2f26;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a59683}
-.res .pk .wk div:first-child{border-left:0}
-.res .pk .wk b{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;color:var(--gold2);font-weight:500;margin-top:2px}
-.res .pk .math{font-variant-numeric:lining-nums;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.35;color:#efe6d8;border-left:2px solid var(--gold);padding-left:16px;margin:4px 0 22px}
-.res .tpr{text-align:center;margin:8px 0 14px}
-.res .tpr s{color:#8d7f6c;font-size:20px;margin-right:10px}
-.res .tpr b{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:500;color:#efe6d8}
-.res .tpr em{display:block;font-style:normal;font-size:13px;color:var(--gold2);letter-spacing:.06em;margin-top:2px}
-.res .pk .btn{width:100%;text-align:center}
-.res .pk .meta{font-size:13px;color:#a59683;text-align:center;margin-top:12px}
-.res .pk .more{display:block;text-align:center;margin-top:12px;color:var(--gold2);font-size:14px}
-@media(max-width:420px){.res .pk .wk b{font-size:18px}.res .pk{padding:22px 18px}}
-.hidden{display:none}
+:root{--bg:#f4eee5;--card:#fbf8f2;--ink:#1f1915;--soft:#5d5249;--mute:#8f8173;--line:#e3d7c6;--gold:#a9834e;--gold2:#c9a46b;--deep:#16110e}
+body{background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.topbar{background:var(--card);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:600px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:12px}
+.topbar img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:1px solid var(--line)}
+.topbar .nm{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:.02em;line-height:1.1}
+.topbar .rl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+main{flex:1}
+.stage{max-width:600px;margin:0 auto;padding:38px 20px 70px}
+.hidden{display:none!important}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.anim{animation:fade .45s ease}
+.eb{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:16px}
+.hook{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,7vw,44px);line-height:1.08;text-align:center;margin-bottom:22px}
+.hook em{font-style:italic;color:var(--gold)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 20px 44px -32px rgba(31,25,21,.45)}
+.ticks{list-style:none;display:flex;flex-direction:column;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:center;font-size:15px;color:var(--soft);line-height:1.4}
+.ck{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:rgba(169,131,78,.14);color:var(--gold);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.go{display:block;width:100%;margin-top:24px;background:var(--deep);color:#f4eee5;border:0;border-radius:14px;padding:19px 20px;font:600 15px 'Manrope',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-align:center;text-decoration:none;transition:transform .15s,background .15s}
+.go:hover{background:#2a201a;transform:translateY(-1px)}
+.go.gold{background:var(--gold)}
+.go.gold:hover{background:#94703f}
+.note{text-align:center;font-size:13px;color:var(--mute);margin-top:12px}
+.prog{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.prog .tr{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.prog .tr i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:6px;transition:width .4s ease}
+.prog span{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.qt{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(27px,5.6vw,34px);line-height:1.15;margin-bottom:22px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:17px 18px;margin-bottom:11px;font:16px/1.4 'Manrope',sans-serif;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.opt:before{content:'';flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:1.5px solid #cbbba6;box-sizing:border-box;transition:all .15s}
+.opt:hover{border-color:var(--gold);transform:translateY(-1px)}
+.opt.sel{border-color:var(--gold);background:#f6ecdc}
+.opt.sel:before{border:6px solid var(--gold)}
+.qback{background:none;border:0;color:var(--mute);font:14px 'Manrope',sans-serif;cursor:pointer;margin-top:8px;padding:6px 0}
+.spin{width:54px;height:54px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--gold);margin:40px auto 24px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.ctr{text-align:center}
+.h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,6vw,38px);line-height:1.12;margin-bottom:14px}
+.lead{color:var(--soft);font-size:17px}
+.an{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.an div{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:15px;color:var(--mute);transition:all .3s}
+.an div b{flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;color:transparent}
+.an div.ld b{border-top-color:var(--gold);animation:sp .8s linear infinite}
+.an div.ok{color:var(--ink)}
+.an div.ok b{background:var(--gold);border-color:var(--gold);color:#fff}
+.rtype{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,8vw,52px);line-height:1;color:var(--gold);text-align:center;margin:4px 0 16px;font-weight:500}
+.rcards{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:24px 0 6px}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 15px 16px}
+.rc .lb{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.rc .lb svg{color:var(--gold);flex:0 0 auto}
+.rc p{font-size:15px;line-height:1.35;font-weight:600;color:var(--ink)}
+.rtext p{color:var(--soft);margin-bottom:12px}
+.tr-row{display:grid;grid-template-columns:1fr 26px 1fr;align-items:stretch;gap:6px;margin-bottom:10px}
+.tc{border-radius:14px;padding:13px 14px;font-size:14.5px;line-height:1.35}
+.tc small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+.tc.now{background:#ece4d8;color:var(--soft)}
+.tc.now small{color:var(--mute)}
+.tc.new{background:var(--deep);color:#f4eee5}
+.tc.new small{color:var(--gold2)}
+.ar{display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.sell{max-width:600px;margin:0 auto;padding:0 20px 90px}
+.s-hero{text-align:center;padding:34px 0 8px}
+.s-hero img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:4px solid var(--card);box-shadow:0 20px 40px -24px rgba(31,25,21,.6);margin-bottom:18px}
+.s-hero h1{font-size:clamp(34px,7.4vw,48px);margin-bottom:14px}
+.s-hero h1 em{color:var(--gold)}
+.s-sec{margin-top:54px}
+.s-sec>.eb{margin-bottom:10px}
+.s-sec>.h2{text-align:center;margin-bottom:22px}
+.out{display:flex;flex-direction:column;gap:11px}
+.out .card{display:flex;gap:16px;align-items:flex-start;padding:18px 20px}
+.out .ic{flex:0 0 auto;width:42px;height:42px;border-radius:12px;background:rgba(169,131,78,.14);color:var(--gold);display:flex;align-items:center;justify-content:center}
+.out h4,.num h4{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;line-height:1.15;margin-bottom:3px}
+.out p,.num p{color:var(--soft);font-size:15px;line-height:1.45}
+.num{display:flex;flex-direction:column}
+.num>div{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.num>div:last-child{border-bottom:1px solid var(--line)}
+.num i{font-style:normal;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);min-width:34px;padding-top:2px;font-variant-numeric:lining-nums}
+.prg .sec{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:11px;overflow:hidden}
+.prg summary{list-style:none;cursor:pointer;padding:17px 20px;display:flex;align-items:center;gap:14px}
+.prg summary::-webkit-details-marker{display:none}
+.prg summary i{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);min-width:74px}
+.prg summary b{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;flex:1;line-height:1.15}
+.prg summary:after{content:'+';font-size:22px;color:var(--gold);transition:transform .2s}
+.prg details[open] summary:after{transform:rotate(45deg)}
+.prg ol{list-style:none;padding:0 20px 16px}
+.prg li{padding:9px 0;border-top:1px solid var(--line);font-size:15px;color:var(--soft);line-height:1.4}
+.prg li span{color:var(--gold);font-weight:600;margin-right:6px}
+.prg .bonus{background:var(--deep);color:#f4eee5;border-color:var(--deep)}
+.prg .bonus summary b{color:#f4eee5}
+.prg .bonus li{border-color:#3a2f26;color:#d9ccba}
+.wk{display:flex;flex-direction:column;gap:11px}
+.wk .card{padding:18px 20px}
+.wk .hd{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.wk .hd i{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.wk .hd b{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600}
+.wk .ba{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wk .ba div{border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.35}
+.wk .ba small{display:block;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px}
+.wk .ba .n{background:#ece4d8;color:var(--soft)}
+.wk .ba .n small{color:var(--mute)}
+.wk .ba .s{background:#f3e7d3;color:var(--ink)}
+.wk .ba .s small{color:var(--gold)}
+.chk .card{padding:6px 22px}
+.chk p.q{padding:15px 0 15px 34px;position:relative;border-top:1px solid var(--line);font-size:16px;line-height:1.45}
+.chk p.q:first-child{border-top:0}
+.chk p.q:before{content:'?';position:absolute;left:0;top:15px;width:22px;height:22px;border-radius:50%;background:rgba(169,131,78,.14);color:var(--gold);font-size:13px;font-weight:700;text-align:center;line-height:22px}
+.chk .after{color:var(--soft);font-size:16px;margin-top:16px;text-align:center}
+.tariff{background:var(--deep);color:#f4eee5;border-radius:20px;padding:28px 24px 26px;box-shadow:0 30px 60px -30px rgba(22,17,14,.8)}
+.tariff .eb{color:var(--gold2)}
+.tariff h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;text-align:center;line-height:1.1;margin-bottom:6px}
+.tariff .sub{text-align:center;color:#bfae98;font-size:14px;margin-bottom:18px}
+.tariff ul{list-style:none;margin-bottom:22px}
+.tariff li{display:flex;gap:12px;padding:10px 0;border-top:1px solid #33291f;font-size:15px;color:#e6dacb;line-height:1.4}
+.tariff li b{color:#fff}
+.tariff li .ck{background:rgba(201,164,107,.18);color:var(--gold2)}
+.tprice{text-align:center;margin-bottom:6px}
+.tprice s{color:#8d7f6c;font-size:21px;margin-right:12px}
+.tprice b{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:500;line-height:1;font-variant-numeric:lining-nums}
+.tbadge{display:table;margin:6px auto 4px;background:rgba(201,164,107,.16);color:var(--gold2);border-radius:30px;padding:6px 14px;font-size:13px;font-weight:600}
+.tariff .meta{text-align:center;font-size:13px;color:#a59683;margin-top:12px}
+.math{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.35;text-align:center;color:var(--ink);margin:0 0 18px;font-variant-numeric:lining-nums}
+.fin{text-align:center}
+.foot{border-top:1px solid var(--line);background:var(--card);padding:26px 20px 90px;text-align:center;font-size:12.5px;color:var(--mute)}
+.foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-bottom:12px}
+.foot a{color:var(--soft)}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:9;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--deep);color:#f4eee5;border-radius:16px;padding:12px 12px 12px 18px;text-decoration:none;box-shadow:0 14px 34px -12px rgba(0,0,0,.55);transform:translateY(140%);transition:transform .3s}
+.sticky.on{transform:none}
+.sticky span{font-size:14px}
+.sticky span b{font-size:17px}
+.sticky span s{color:#8d7f6c;margin-left:6px;font-size:13px}
+.sticky em{font-style:normal;background:var(--gold);border-radius:11px;padding:11px 16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media(min-width:640px){.sticky{left:50%;right:auto;width:560px;margin-left:-280px}}
+@media(max-width:380px){.rcards{grid-template-columns:1fr}.tr-row{grid-template-columns:1fr 20px 1fr}.tc{font-size:13.5px;padding:11px}}
 </style>
 </head>
 <body>
-<div class="q">
-  <div class="logo serif" style="font-size:22px;letter-spacing:.08em">Виктория Арден</div>
-  <div id="intro">
-    <div class="eyebrow" style="text-align:center">Бесплатный тест · 2 минуты</div>
-    <h1 id="t-title"></h1>
-    <p class="sub" id="t-sub"></p>
-    <div style="text-align:center"><button class="btn" id="start">Начать тест</button></div>
+<header class="topbar"><div class="in">
+  <img id="ava" alt="Виктория Арден">
+  <div><div class="nm">Виктория Арден</div><div class="rl">Книга-практикум</div></div>
+</div></header>
+
+<main>
+<div class="stage" id="stage">
+
+  <div id="intro" class="anim">
+    <div class="eb">Бесплатный тест · 2 минуты</div>
+    <h1 class="hook" id="t-title"></h1>
+    <div class="card">
+      <ul class="ticks">
+        <li><span class="ck">&#10003;</span><span id="t-b1"></span></li>
+        <li><span class="ck">&#10003;</span><span>Результат сразу, без регистрации и почты</span></li>
+        <li><span class="ck">&#10003;</span><span>Покажет, с чего начать прямо на этой неделе</span></li>
+      </ul>
+    </div>
+    <button class="go" id="start">Начать тест</button>
+    <p class="note">6 вопросов. Отвечай первое, что приходит в голову.</p>
   </div>
-  <div id="quiz" class="hidden"><div class="bar"><i id="bar"></i></div><div class="step" id="step"></div><h2 id="qtext"></h2><div id="opts"></div></div>
-  <div id="result" class="res hidden"></div>
+
+  <div id="quiz" class="hidden">
+    <div class="prog"><div class="tr"><i id="bar"></i></div><span id="step"></span></div>
+    <div id="qwrap">
+      <h2 class="qt" id="qtext"></h2>
+      <div id="opts"></div>
+      <button class="qback" id="back">← Назад</button>
+    </div>
+  </div>
+
+  <div id="loader" class="hidden ctr">
+    <div class="spin"></div>
+    <div class="h2">Смотрю на твои ответы…</div>
+  </div>
+
+  <div id="info" class="hidden">
+    <div class="eb">Промежуточный итог</div>
+    <div class="h2 ctr">Уже видна закономерность</div>
+    <div class="card"><p class="lead" id="infoT"></p></div>
+    <button class="go" id="infoBtn">Продолжить</button>
+  </div>
+
+  <div id="analyze" class="hidden">
+    <div class="h2 ctr">Собираю твой результат…</div>
+    <div class="an" id="anList"></div>
+  </div>
+
+  <div id="result" class="hidden">
+    <div class="eb">Твой результат</div>
+    <div class="rtype" id="rType"></div>
+    <div class="rtext" id="rText"></div>
+    <div class="rcards" id="rCards"></div>
+    <button class="go" id="rBtn">Что с этим делать →</button>
+    <p class="note">Тест носит образовательный характер и не является психологической диагностикой.</p>
+  </div>
+
+  <div id="trans" class="hidden">
+    <div class="eb">Через 21 день</div>
+    <div class="h2 ctr" id="trTitle"></div>
+    <p class="lead ctr" style="margin-bottom:22px">Не за счёт силы воли, а за счёт готовых фраз, которые ты начнёшь говорить вместо старых.</p>
+    <div id="trList"></div>
+    <button class="go gold" id="trBtn">Хочу так же →</button>
+  </div>
 </div>
+
+<div id="sell" class="hidden">
+  <div class="sell">
+    <div class="s-hero anim">
+      <img id="ava2" alt="Виктория Арден">
+      <div class="eb">Книга + практикум на 21 день</div>
+      <h1 class="serif">20 правил женщины, которая <em>стоит дорого</em></h1>
+      <p class="lead">Короткие правила и готовые фразы, чтобы перестать соглашаться на меньшее: в деньгах, в отношениях и в том, как ты говоришь о себе.</p>
+    </div>
+
+    <div class="s-sec">
+      <div class="eb">Что ты получишь</div>
+      <div class="h2 serif">Три перемены, которые заметят все</div>
+      <div class="out">
+        <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a2.5 2.5 0 0 0-2.5-1.5c-1.4 0-2.5.8-2.5 2s1.1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2A2.6 2.6 0 0 1 9.5 15M12 6v1.5M12 16.5V18"/></svg></div><div><h4>Деньги</h4><p>Начнёшь называть свою цену первой и перестанешь снижать её сама, ещё до того, как кто-то попросил.</p></div></div>
+        <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg></div><div><h4>Отношения</h4><p>Перестанешь подстраиваться и начнёшь выбирать сама, оставаясь тёплой и мягкой.</p></div></div>
+        <div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9Z"/></svg></div><div><h4>Уверенность</h4><p>Перестанешь оправдываться и извиняться. Будешь говорить коротко, спокойно и по делу.</p></div></div>
+      </div>
+    </div>
+
+    <div class="s-sec">
+      <div class="eb">Что изменится</div>
+      <div class="h2 serif">После книги ты</div>
+      <div class="num">
+        <div><i>01</i><div><h4>Скажешь «нет» без длинных объяснений</h4><p>и не будешь прокручивать разговор весь вечер</p></div></div>
+        <div><i>02</i><div><h4>Назовёшь сумму и выдержишь паузу</h4><p>без «ну, можно и дешевле, если что»</p></div></div>
+        <div><i>03</i><div><h4>Примешь комплимент и помощь</h4><p>просто сказав «спасибо», без «да брось»</p></div></div>
+        <div><i>04</i><div><h4>Перестанешь подстраиваться под его расписание</h4><p>и начнёшь предлагать время, удобное тебе</p></div></div>
+        <div><i>05</i><div><h4>Перестанешь сканировать чужие реакции</h4><p>и начнёшь замечать, чего хочешь ты сама</p></div></div>
+        <div><i>06</i><div><h4>Начнёшь платить сначала себе</h4><p>и увидишь, где работала дешевле, чем могла</p></div></div>
+      </div>
+    </div>
+
+    <div class="s-sec">
+      <div class="eb">Что внутри</div>
+      <div class="h2 serif">5 разделов, 20 правил и практикум</div>
+      <p class="lead ctr" style="margin:-10px 0 20px">К каждому правилу: мысль, готовая фраза и практика на 10 минут.</p>
+      <div class="prg" id="prg"></div>
+    </div>
+
+    <div class="s-sec">
+      <div class="eb">Практикум</div>
+      <div class="h2 serif">Как всё меняется за 21 день</div>
+      <div class="wk">
+        <div class="card"><div class="hd"><i>Неделя 1</i><b>Замечать</b></div><div class="ba"><div class="n"><small>Сейчас</small>соглашаешься и только потом понимаешь, что не хотела</div><div class="s"><small>Станет</small>видишь момент, где отдаёшь себя дешевле</div></div></div>
+        <div class="card"><div class="hd"><i>Неделя 2</i><b>Пробовать</b></div><div class="ba"><div class="n"><small>Сейчас</small>молчишь, чтобы никого не задеть</div><div class="s"><small>Станет</small>первые спокойные «нет» и первая названная цена</div></div></div>
+        <div class="card"><div class="hd"><i>Неделя 3</i><b>Закреплять</b></div><div class="ba"><div class="n"><small>Сейчас</small>каждый отказ даётся как подвиг</div><div class="s"><small>Станет</small>новые ответы звучат привычно и легко</div></div></div>
+      </div>
+    </div>
+
+    <div class="s-sec chk">
+      <div class="eb">Проверь себя</div>
+      <div class="h2 serif">Ответь честно на 4 вопроса</div>
+      <div class="card">
+        <p class="q">Когда ты последний раз назвала цену и не добавила «но можно обсудить»?</p>
+        <p class="q">Можешь ли ты отказать подруге в долге и не извиняться потом весь вечер?</p>
+        <p class="q">Когда ты последний раз просто сказала «спасибо» на комплимент?</p>
+        <p class="q">Если мужчина пишет в 23:00 «приезжай», ты едешь, даже если не хочешь?</p>
+      </div>
+      <p class="after">Если хотя бы на два вопроса ответ неприятный, это не приговор. Это значит, что книга написана именно для тебя.</p>
+    </div>
+
+    <div class="s-sec" id="price">
+      <div class="tariff">
+        <div class="eb">Один вариант, полный доступ</div>
+        <h3>Книга + практикум на 21 день</h3>
+        <p class="sub">PDF, 40 страниц · остаётся у тебя навсегда</p>
+        <ul>
+          <li><span class="ck">&#10003;</span><span><b>20 правил</b> в 5 разделах: мысль, фраза и практика к каждому</span></li>
+          <li><span class="ck">&#10003;</span><span><b>Стартовый тест</b>: какой раздел нужен тебе первым</span></li>
+          <li><span class="ck">&#10003;</span><span><b>План на 21 день</b>: одно маленькое действие в день</span></li>
+          <li><span class="ck">&#10003;</span><span><b>6 сценариев разговоров</b> слово в слово: прибавка, цена, отказ, критика близких</span></li>
+          <li><span class="ck">&#10003;</span><span><b>Денежный разбор и трекер</b>: видно, как ты меняешься</span></li>
+        </ul>
+        <div class="tprice"><s>2&nbsp;490&nbsp;₽</s><b>990&nbsp;₽</b></div>
+        <span class="tbadge">Твоя временная персональная скидка</span>
+        <a class="go gold buy" style="margin-top:20px" href="index.html#price">Забрать книгу с практикумом</a>
+        <p class="meta">PDF придёт на почту сразу после оплаты · карта или СБП</p>
+      </div>
+    </div>
+
+    <div class="s-sec fin">
+      <p class="math">Посчитай сама. Если один сценарий хоть раз поможет назвать сумму на 1&nbsp;000&nbsp;₽ выше, книга уже окупилась.</p>
+      <a class="go buy" href="index.html#price">Начать практикум за 990&nbsp;₽</a>
+      <a class="note" style="display:block;color:var(--gold)" href="index.html">Подробнее о книге →</a>
+    </div>
+  </div>
+  <footer class="foot">
+    <nav id="docs"><a href="oferta.html">Договор оферты</a><a href="privacy.html">Политика конфиденциальности</a><a href="refund.html">Возврат и поддержка</a></nav>
+    <p>Материалы носят образовательный и мотивационный характер и не являются психологической, финансовой или юридической консультацией.</p>
+  </footer>
+  <a class="sticky buy" href="index.html#price"><span>Книга + практикум <b>990&nbsp;₽</b><s>2&nbsp;490&nbsp;₽</s></span><em>Забрать</em></a>
+</div>
+</main>
+
 <script>
+const PHOTO = 'https://d8j0ntlcm91z4.cloudfront.net/user_3JpAUYgHEafrY0TdEruVPSYpAoP/hf_20261002_142903_53f943ce-415d-44e1-a7d0-747fc3f11f57.png';
 const TESTS = {
   kapital: {
-    title: 'Какой у тебя денежный потолок?',
-    sub: '6 вопросов. Отвечай честно, первое, что приходит в голову. В конце узнаешь, что именно держит твой доход на месте.',
+    title: 'Какой у тебя <em>денежный потолок?</em>',
+    b1: 'Узнаешь, что именно держит твой доход на одном уровне',
     qs: [
       ['Тебе предлагают работу с доходом в два раза выше. Первая мысль:', ['Подруге нужнее, пусть она попробует','Я ещё недостаточно хороша для этого','А вдруг не справлюсь и потеряю то, что есть','Отлично, когда начинаем?']],
       ['Неожиданно пришли 50 000 ₽. Что ты сделаешь?', ['Помогу близким, у них сейчас трудно','Закрою текущие расходы, их всегда много','Отложу и не буду трогать, мало ли что','Часть отложу, часть вложу в себя или дело']],
@@ -72,16 +319,33 @@ const TESTS = {
       ['Подруга просит в долг уже третий раз. Ты:', ['Даю, она же подруга','Даю и молча переживаю','Отказываю, но потом чувствую вину','Спокойно отказываю']],
       ['Какая фраза про тебя?', ['«Сначала другие, потом я»','«Я работаю больше всех, а получаю меньше»','«Главное, чтобы стабильно»','«Я хочу расти, и мне не стыдно»']]
     ],
+    trTitle: 'Твои деньги через три недели',
     types: [
-      {name:'Спасательница', text:['Твой денежный потолок — это другие люди. Ты щедрая и надёжная, и именно поэтому деньги у тебя не задерживаются: они уходят туда, где «нужнее».','Тебе кажется, что хотеть денег для себя — эгоистично. Но пока ты на последнем месте в собственном бюджете, твой доход будет расти только у окружающих.'], rules:'Правила 1, 11 и 12 в книге — именно про тебя: как поставить себя на первое место и при этом остаться хорошим человеком.'},
-      {name:'Тихая отличница', text:['Ты много работаешь, всё делаешь качественно и ждёшь, что это заметят и оценят. Но деньги не приходят за старание. Они приходят к тем, кто их просит.','Твой потолок — страх назвать свою цену. Ты снижаешь её сама, ещё до того, как кто-то попросил.'], rules:'Правила 9 и 6 научат называть цену и держать паузу, а правило 17 — говорить коротко и без оправданий.'},
-      {name:'Хранительница стабильности', text:['Для тебя главное — чтобы не стало хуже. Это разумно, но у этой осторожности есть цена: ты держишься за то, что есть, и не пускаешь в жизнь большее.','Твой потолок — привычка жить в режиме выживания. Ты видишь риск там, где другие видят возможность.'], rules:'Правило 10 «Как я могу себе это позволить?» и правило 12 про собственную безопасность покажут, как расти, не теряя опоры.'},
-      {name:'Готова к росту', text:['У тебя здоровое отношение к деньгам и смелость хотеть большего. Потолок у тебя не в голове, а в привычках, которые остались с прошлых времён.','Небольшие, но точные изменения дадут тебе заметный рывок в ближайшие месяцы.'], rules:'Обрати внимание на правила 11 «Плати сначала себе» и 19 «Окружение — это твой потолок»: они помогут закрепить рост.'}
+      {name:'Спасательница',
+       pattern:'Судя по первым ответам, деньги у тебя чаще уходят к другим, чем остаются у тебя. Ты привыкла думать сначала о близких, а о себе потом, если останется.',
+       text:['Твой денежный потолок — это другие люди. Ты щедрая и надёжная, и именно поэтому деньги у тебя не задерживаются: они уходят туда, где «нужнее».','Пока ты на последнем месте в собственном бюджете, твой доход будет расти только у окружающих.'],
+       cards:['Чувство, что хотеть денег для себя эгоистично','Привычка спасать близких за свой счёт','Ты много даёшь, но мало остаётся тебе','Правила 1, 11 и 12 в книге'],
+       pairs:[['Сначала другие, потом я','Сначала плачу себе, потом помогаю'],['Даю в долг, потому что неудобно отказать','Спокойно говорю: «Сейчас не могу»'],['Деньги уходят, не успев прийти','Есть свой резерв, о котором никто не знает'],['Чувство вины за траты на себя','Трачу на себя без оправданий']]},
+      {name:'Тихая отличница',
+       pattern:'Судя по первым ответам, ты делаешь много и качественно, но называть свою цену тебе неловко. Ты ждёшь, что старание заметят сами.',
+       text:['Ты много работаешь и ждёшь, что это заметят и оценят. Но деньги не приходят за старание. Они приходят к тем, кто их просит.','Твой потолок — страх назвать свою цену. Ты снижаешь её сама, ещё до того, как кто-то попросил.'],
+       cards:['Страх назвать свою цену','Надежда, что старание оценят сами','Работаешь больше, получаешь меньше','Правила 9, 6 и 17 в книге'],
+       pairs:[['Называю меньше, чтобы не отпугнуть','Называю цену первой и молчу'],['Оправдываюсь после каждой цифры','Говорю коротко, без «но можно обсудить»'],['Жду, когда предложат прибавку','Прошу прибавку по готовому сценарию'],['Тащу всё сама и устаю','Беру столько, сколько стоит мой труд']]},
+      {name:'Хранительница стабильности',
+       pattern:'Судя по первым ответам, для тебя главное, чтобы не стало хуже. Ты держишься за то, что есть, даже когда можно больше.',
+       text:['Для тебя главное — чтобы не стало хуже. Это разумно, но у осторожности есть цена: ты держишься за то, что есть, и не пускаешь в жизнь большее.','Твой потолок — привычка жить в режиме выживания. Ты видишь риск там, где другие видят возможность.'],
+       cards:['Страх потерять то, что уже есть','Привычка жить в режиме выживания','Возможности проходят мимо','Правила 10 и 12 в книге'],
+       pairs:[['«Я не могу себе это позволить»','«Как я могу себе это позволить?»'],['Откладываю «на чёрный день»','Откладываю на свою цель'],['Отказываюсь от шансов из страха','Пробую маленькими безопасными шагами'],['Стабильно, но тесно','Есть опора и есть рост']]},
+      {name:'Готова к росту',
+       pattern:'Судя по первым ответам, у тебя здоровое отношение к деньгам. Мешают скорее старые привычки, чем страх.',
+       text:['У тебя здоровое отношение к деньгам и смелость хотеть большего. Потолок у тебя не в голове, а в привычках, которые остались с прошлых времён.','Небольшие, но точные изменения дадут тебе заметный рывок в ближайшие месяцы.'],
+       cards:['Старые привычки, а не страх','Окружение, которое тянет назад','Рост медленнее, чем мог бы быть','Правила 11 и 19 в книге'],
+       pairs:[['Хочу больше, но действую по-старому','Новые правила закреплены в привычках'],['Плачу себе, если что-то осталось','Плачу себе первой, каждый месяц'],['Окружение тормозит','Рядом люди, которые растут'],['Рост рывками','Рост ровный и спокойный']]}
     ]
   },
   cennost: {
-    title: 'Что мешает тебе встретить своего мужчину?',
-    sub: '6 вопросов про то, как ты ведёшь себя в отношениях. В конце узнаешь, какая установка притягивает к тебе не тех.',
+    title: 'Что мешает тебе встретить <em>своего мужчину?</em>',
+    b1: 'Узнаешь, какая установка притягивает к тебе не тех мужчин',
     qs: [
       ['Мужчина предлагает оплатить ужин. Ты:', ['Предлагаю поделить, мне неудобно','Говорю «я сама», я независимая','Соглашаюсь, но жду подвоха','Говорю «спасибо» и улыбаюсь']],
       ['Он пишет в 23:00 «Ты где? Давай увидимся». Ты:', ['Отменяю планы и еду','Пишу «я занята», хотя сижу дома','Отвечаю через пару часов, чтобы не выглядеть доступной','Отвечаю, когда мне удобно, и предлагаю время']],
@@ -90,16 +354,33 @@ const TESTS = {
       ['Он забыл о важной для тебя дате. Ты:', ['Промолчу, не хочу ссоры','Скажу, что мне всё равно','Обижусь и буду ждать, когда догадается','Спокойно скажу, что мне неприятно']],
       ['Какая фраза про тебя?', ['«Я всё для него, а он…»','«Мне никто не нужен»','«Нормальных мужчин не осталось»','«Я знаю, чего хочу»']]
     ],
+    trTitle: 'Твои отношения через три недели',
     types: [
-      {name:'Удобная', text:['Ты отдаёшь очень много: заботу, время, понимание. Но мужчина, которому не нужно стараться, перестаёт стараться.','Твоя установка звучит так: «Меня полюбят, если я буду удобной». К такой женщине тянутся те, кому нужна удобная жизнь, а не она сама.'], rules:'Правила 13, 14 и 16 — твои главные: как перестать подстраиваться и при этом остаться тёплой.'},
-      {name:'Сильная, которая всё сама', text:['Ты умеешь всё и ни от кого не зависишь. Это твоя сила и одновременно стена: мужчине рядом с тобой просто нечего делать.','Твоя установка: «Рассчитывать можно только на себя». Достойные мужчины чувствуют, что им здесь не место, и проходят мимо.'], rules:'Правило 13 «Умей принимать» — первое, с чего стоит начать. Затем правило 16 про то, что доказывать ничего не нужно.'},
-      {name:'Ожидающая', text:['Ты ждёшь, что правильный мужчина появится сам и сам всё поймёт. А пока проверяешь тех, кто рядом, и разочаровываешься.','Твоя установка: «Если он тот самый, он догадается». Но достойные мужчины не умеют читать мысли. Они реагируют на ясные сигналы.'], rules:'Правило 15 «Выбирай сама» и правило 8 «Люди делают то, что ты разрешаешь» покажут, как перестать ждать и начать выбирать.'},
-      {name:'Почти готова', text:['У тебя здоровые представления об отношениях и уважение к себе. Тебе осталось немного: расширить круг и позволить себе проявлять интерес первой.','Твоя установка почти рабочая, её нужно лишь закрепить в действиях.'], rules:'Обрати внимание на правила 15 и 19: новое окружение быстро приведёт тебя к нужным людям.'}
+      {name:'Удобная',
+       pattern:'Судя по первым ответам, ты быстро подстраиваешься под мужчину: под его время, его планы, его настроение. Тебе проще уступить, чем рискнуть ссорой.',
+       text:['Ты отдаёшь очень много: заботу, время, понимание. Но мужчина, которому не нужно стараться, перестаёт стараться.','Твоя установка звучит так: «Меня полюбят, если я буду удобной». К такой женщине тянутся те, кому нужна удобная жизнь, а не она сама.'],
+       cards:['Установка «полюбят, если я удобная»','Страх ссоры и потери','Мужчины перестают стараться','Правила 13, 14 и 16 в книге'],
+       pairs:[['Отменяю планы ради него','Предлагаю время, удобное мне'],['Молчу, чтобы не было ссоры','Спокойно говорю, что мне неприятно'],['Всё для него','Забочусь и о себе тоже'],['Ко мне тянутся потребители','Рядом мужчина, который старается']]},
+      {name:'Сильная, которая всё сама',
+       pattern:'Судя по первым ответам, ты привыкла всё делать сама и не рассчитывать на мужчину. Принимать помощь тебе непривычно.',
+       text:['Ты умеешь всё и ни от кого не зависишь. Это твоя сила и одновременно стена: мужчине рядом с тобой просто нечего делать.','Твоя установка: «Рассчитывать можно только на себя». Достойные мужчины чувствуют, что им здесь не место, и проходят мимо.'],
+       cards:['Установка «рассчитывать можно только на себя»','Неумение принимать заботу','Мужчине рядом нечего делать','Правила 13 и 16 в книге'],
+       pairs:[['«Я сама»','«Спасибо, мне приятно»'],['Тяну всё одна и устаю','Позволяю помогать и радуюсь этому'],['Доказываю, что справлюсь','Не доказываю ничего'],['Рядом нет места мужчине','Рядом мужчина, которому хочется заботиться']]},
+      {name:'Ожидающая',
+       pattern:'Судя по первым ответам, ты чаще ждёшь, чем выбираешь: что он найдёт тебя сам, догадается сам, докажет сам.',
+       text:['Ты ждёшь, что правильный мужчина появится сам и сам всё поймёт. А пока проверяешь тех, кто рядом, и разочаровываешься.','Твоя установка: «Если он тот самый, он догадается». Но мужчины не умеют читать мысли. Они реагируют на ясные сигналы.'],
+       cards:['Установка «тот самый догадается сам»','Проверки вместо ясных слов','Разочарования раз за разом','Правила 15 и 8 в книге'],
+       pairs:[['Жду, что он сам меня найдёт','Выбираю места и людей сама'],['Обижаюсь и молчу','Говорю прямо, чего хочу'],['Проверяю, любит ли он','Смотрю на поступки, а не проверяю'],['«Нормальных не осталось»','Вижу тех, кто мне подходит']]},
+      {name:'Почти готова',
+       pattern:'Судя по первым ответам, у тебя здоровые представления об отношениях. Тебе не хватает скорее смелости проявляться, чем уважения к себе.',
+       text:['У тебя здоровые представления об отношениях и уважение к себе. Осталось немного: расширить круг и позволить себе проявлять интерес первой.','Твоя установка почти рабочая, её нужно лишь закрепить в действиях.'],
+       cards:['Узкий круг общения','Осторожность в проявлении интереса','Встреча откладывается','Правила 15 и 19 в книге'],
+       pairs:[['Знаю, чего хочу, но жду','Проявляю интерес первой'],['Один и тот же круг','Новые знакомства каждый месяц'],['Осторожничаю','Пробую спокойно и с улыбкой'],['Почти готова','Готова и действую']]}
     ]
   },
   status: {
-    title: 'Что мешает тебе чувствовать себя достойной?',
-    sub: '6 вопросов про уверенность. В конце узнаешь, какая установка снижает твою цену в глазах других и в твоих собственных.',
+    title: 'Что мешает тебе чувствовать себя <em>достойной?</em>',
+    b1: 'Узнаешь, какая установка снижает твою цену в глазах других',
     qs: [
       ['Тебе говорят: «Ты сегодня прекрасно выглядишь». Ты отвечаешь:', ['«Да брось, я даже не накрашена»','«Спасибо… а что, обычно плохо?»','Смущаюсь и перевожу тему','«Спасибо, мне приятно»']],
       ['На совещании или в компании ты:', ['Молчу, вдруг скажу глупость','Говорю много, чтобы доказать, что я в теме','Слежу за реакцией каждого','Говорю, когда есть что сказать']],
@@ -108,56 +389,145 @@ const TESTS = {
       ['Как часто ты извиняешься, когда ничего плохого не сделала?', ['Постоянно','Часто, особенно на работе','Иногда, когда чувствую напряжение','Почти никогда']],
       ['Какая фраза про тебя?', ['«Лучше быть незаметной»','«Я должна быть лучшей, иначе меня не ценят»','«Мне важно, что обо мне думают»','«Я знаю себе цену»']]
     ],
+    trTitle: 'Твоя уверенность через три недели',
     types: [
-      {name:'Тень', text:['Ты привыкла быть незаметной: не высовываться, не занимать много места, не мешать. Так когда-то было безопаснее.','Твоя установка: «Меня не должно быть слишком много». Но люди оценивают тебя ровно так, как ты подаёшь себя сама, то есть очень скромно.'], rules:'Начни с правил 2 «Не спорь с комплиментом» и 3 «Перестань извиняться». Это самые быстрые шаги к другому ощущению себя.'},
-      {name:'Отличница-доказательница', text:['Ты всё время доказываешь, что достойна: больше работаешь, больше знаешь, больше делаешь. И очень устаешь.','Твоя установка: «Меня ценят только за результат». Но уверенность — это не количество доказательств, а спокойствие без них.'], rules:'Правила 16 «Не доказывай» и 17 «Говори коротко» помогут перестать бежать и начать стоять уверенно.'},
-      {name:'Сканер чужих реакций', text:['Ты очень чувствительна к людям и замечаешь каждый взгляд и интонацию. Но эта чуткость обернулась против тебя: ты живёшь в чужих головах, а не в своей.','Твоя установка: «Моя ценность зависит от того, что думают другие». Это отнимает силы и делает тебя зависимой от одобрения.'], rules:'Правило 18 «Перестань сканировать чужую реакцию» и правило 6 «Держи паузу» — твой главный инструмент.'},
-      {name:'Уверенная', text:['У тебя здоровая самооценка, и ты умеешь себя подать. Иногда в напряжённых ситуациях старые привычки возвращаются, но ты уже знаешь себе цену.','Тебе осталось закрепить это в деньгах и отношениях, где цена особенно заметна.'], rules:'Обрати внимание на разделы «Деньги» и «Мужчины»: правила 9 и 13 помогут перенести уверенность туда, где она приносит больше всего.'}
+      {name:'Тень',
+       pattern:'Судя по первым ответам, ты стараешься занимать как можно меньше места: не высовываться, не мешать, не быть «слишком».',
+       text:['Ты привыкла быть незаметной: не высовываться, не занимать много места, не мешать. Так когда-то было безопаснее.','Твоя установка: «Меня не должно быть слишком много». Но люди оценивают тебя ровно так, как ты подаёшь себя сама, то есть очень скромно.'],
+       cards:['Установка «меня не должно быть много»','Привычка извиняться за себя','Тебя недооценивают','Правила 2 и 3 в книге'],
+       pairs:[['«Да брось, я даже не накрашена»','«Спасибо, мне приятно»'],['Извиняюсь по десять раз в день','Извиняюсь, только когда правда виновата'],['Молчу, вдруг скажу глупость','Говорю, когда есть что сказать'],['Меня не замечают','Меня слышат и запоминают']]},
+      {name:'Отличница-доказательница',
+       pattern:'Судя по первым ответам, ты всё время доказываешь, что достойна: больше стараешься, больше объясняешь, больше делаешь.',
+       text:['Ты всё время доказываешь, что достойна: больше работаешь, больше знаешь, больше делаешь. И очень устаёшь.','Твоя установка: «Меня ценят только за результат». Но уверенность — это не количество доказательств, а спокойствие без них.'],
+       cards:['Установка «ценят только за результат»','Длинные объяснения и оправдания','Усталость и выгорание','Правила 16 и 17 в книге'],
+       pairs:[['Отказываю с длинным объяснением','«Нет, мне это не подходит»'],['Доказываю, что я в теме','Спокойно говорю по делу'],['Работаю на износ ради оценки','Отдыхаю без чувства вины'],['Устаю от постоянной гонки','Чувствую опору без доказательств']]},
+      {name:'Сканер чужих реакций',
+       pattern:'Судя по первым ответам, ты очень внимательна к тому, как на тебя смотрят и что подумают. Чужое мнение весит для тебя больше своего.',
+       text:['Ты очень чувствительна к людям и замечаешь каждый взгляд и интонацию. Но эта чуткость обернулась против тебя: ты живёшь в чужих головах, а не в своей.','Твоя установка: «Моя ценность зависит от того, что думают другие». Это отнимает силы и делает тебя зависимой от одобрения.'],
+       cards:['Зависимость от одобрения','Прокручивание разговоров после','Сил на себя почти не остаётся','Правила 18 и 6 в книге'],
+       pairs:[['Прокручиваю, как на меня посмотрели','Думаю о своих делах'],['Соглашаюсь, а потом злюсь','Беру паузу и отвечаю завтра'],['Живу в чужих головах','Слышу, чего хочу я'],['Устаю от людей','Общаюсь спокойно и легко']]},
+      {name:'Уверенная',
+       pattern:'Судя по первым ответам, ты в целом знаешь себе цену. Старые привычки возвращаются только в напряжённых ситуациях.',
+       text:['У тебя здоровая самооценка, и ты умеешь себя подать. Иногда в напряжённых ситуациях старые привычки возвращаются, но ты уже знаешь себе цену.','Тебе осталось закрепить это в деньгах и отношениях, где цена особенно заметна.'],
+       cards:['Старые привычки в стрессе','Уверенность не доходит до денег','Ты стоишь больше, чем получаешь','Правила 9 и 13 в книге'],
+       pairs:[['Уверена, но не в деньгах','Уверенно называю свою цену'],['В стрессе извиняюсь','В стрессе держу паузу'],['Принимаю не всё, что предлагают','Умею принимать заботу и помощь'],['Знаю себе цену','Получаю по своей цене']]}
     ]
   }
 };
+const RULES = [
+  ['Раздел 1','Самоценность',['Твоя цена — это то, что ты принимаешь','Не спорь с комплиментом','Перестань извиняться за то, что занимаешь место','Говори о себе как о человеке, которым хочешь стать']],
+  ['Раздел 2','Границы',['«Нет» — это законченное предложение','Держи паузу','Не объясняй решение тем, кто не участвует в его последствиях','Люди делают то, что ты разрешаешь']],
+  ['Раздел 3','Деньги',['Называй свою цену первой и не снижай её сама','«Как я могу себе это позволить?»','Плати сначала себе','Твой доход — это твоя безопасность, а не каприз']],
+  ['Раздел 4','Мужчины и отношения',['Умей принимать','Не подстраивай жизнь под его расписание','Выбирай сама, а не из тех, кто выбрал тебя','Не доказывай, что ты хорошая']],
+  ['Раздел 5','Жизнь для себя',['Говори коротко','Перестань сканировать чужую реакцию','Окружение — это твой потолок','Выбирай себя каждый день']]
+];
+const ICONS = [
+  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>',
+  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>',
+  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>',
+  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>'
+];
+const LABELS = ['Главная причина','Что её подпитывает','К чему это ведёт','С чего начать'];
+
 const key = new URLSearchParams(location.search).get('t') || 'kapital';
 const T = TESTS[key] || TESTS.kapital;
 const $ = id => document.getElementById(id);
-$('t-title').textContent = T.title; $('t-sub').textContent = T.sub;
-let i = 0, score = [0,0,0,0];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('ava').src = PHOTO; $('ava2').src = PHOTO;
+$('t-title').innerHTML = T.title; $('t-b1').textContent = T.b1;
+
+const SCREENS = ['intro','quiz','loader','info','analyze','result','trans'];
+function screen(id){
+  SCREENS.forEach(s => $(s).classList.toggle('hidden', s !== id));
+  const el = $(id); el.classList.remove('anim'); void el.offsetWidth; el.classList.add('anim');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+let i = 0, picks = [], infoShown = false, locked = false;
+const orders = T.qs.map(() => [0,1,2,3].sort(() => Math.random() - .5));
+function leader(){ const s=[0,0,0,0]; picks.forEach(k => s[k]++); return s.indexOf(Math.max(...s)); }
+
 function show(){
   const [q, opts] = T.qs[i];
-  $('step').textContent = `Вопрос ${i+1} из ${T.qs.length}`;
+  $('step').textContent = `${i+1} из ${T.qs.length}`;
   $('bar').style.width = (i / T.qs.length * 100) + '%';
   $('qtext').textContent = q;
-  const order = [0,1,2,3].sort(() => Math.random() - .5);
   $('opts').innerHTML = '';
-  order.forEach(k => { const b = document.createElement('button'); b.className = 'opt'; b.textContent = opts[k]; b.onclick = () => { score[k]++; i++; i < T.qs.length ? show() : result(); }; $('opts').appendChild(b); });
+  orders[i].forEach(k => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (picks[i] === k ? ' sel' : '');
+    b.textContent = opts[k];
+    b.onclick = () => pick(k, b);
+    $('opts').appendChild(b);
+  });
+  $('back').style.visibility = i ? 'visible' : 'hidden';
+  const w = $('qwrap'); w.classList.remove('anim'); void w.offsetWidth; w.classList.add('anim');
+}
+function pick(k, b){
+  if (locked) return; locked = true;
+  picks[i] = k; picks.length = i + 1;
+  document.querySelectorAll('#opts .opt').forEach(o => o.classList.remove('sel'));
+  b.classList.add('sel');
+  $('bar').style.width = ((i+1) / T.qs.length * 100) + '%';
+  setTimeout(() => {
+    locked = false; i++;
+    if (i === 3 && !infoShown) { infoShown = true; loader(); }
+    else if (i < T.qs.length) show();
+    else analyze();
+  }, 280);
+}
+function loader(){
+  screen('loader');
+  setTimeout(() => { $('infoT').textContent = T.types[leader()].pattern; screen('info'); }, 1700);
+}
+$('infoBtn').onclick = () => { screen('quiz'); show(); };
+$('back').onclick = () => { if (i > 0) { i--; show(); } };
+function analyze(){
+  screen('analyze');
+  const items = ['Сравниваю ответы между собой','Определяю главную установку','Подбираю правила из книги под тебя'];
+  $('anList').innerHTML = items.map(t => `<div><b>&#10003;</b>${esc(t)}</div>`).join('');
+  const rows = [...$('anList').children]; let n = 0;
+  (function run(){
+    if (n >= rows.length) { setTimeout(result, 500); return; }
+    rows[n].classList.add('ld');
+    setTimeout(() => { rows[n].classList.remove('ld'); rows[n].classList.add('ok'); n++; run(); }, 950);
+  })();
 }
 function result(){
-  const best = score.indexOf(Math.max(...score));
-  const r = T.types[best];
-  $('quiz').classList.add('hidden');
-  $('result').classList.remove('hidden');
-  $('result').innerHTML = `<div class="eyebrow">Твой результат</div><div class="type">${r.name}</div>${r.text.map(p=>`<p>${p}</p>`).join('')}
-  <div class="box"><h3>Что с этим делать</h3><p>${r.rules}</p><p>Прочитать правило легко. Сказать его вслух в нужный момент сложнее. Поэтому в книге к каждому правилу есть готовая фраза, а в конце практикум, который превращает правила в привычку.</p></div>
-  <div class="pk">
-    <div class="eyebrow">Книга + практикум на 21 день</div>
-    <h3>За три недели новые ответы станут твоими</h3>
-    <div class="wk"><div>Неделя 1<b>Замечать</b></div><div>Неделя 2<b>Пробовать</b></div><div>Неделя 3<b>Закреплять</b></div></div>
-    <ul>
-      <li><b>20 правил</b>: мысль, готовая фраза и практика на 10 минут к каждому</li>
-      <li><b>Тест «с чего начать»</b>: покажет, какой раздел нужен тебе первым</li>
-      <li><b>План на 21 день</b>: одно маленькое действие в день</li>
-      <li><b>6 сценариев трудных разговоров</b>: прибавка, цена, отказ, критика близких. Что сказать слово в слово</li>
-      <li><b>Денежный разбор и трекер</b>: видно, где ты работаешь дешевле, чем могла бы, и как меняешься</li>
-    </ul>
-    <p class="math">Посчитай сама. Если один сценарий поможет тебе хоть раз назвать сумму на 1 000 ₽ выше, книга уже окупилась.</p>
-    <div class="tpr"><s>2&nbsp;490&nbsp;₽</s><b>990&nbsp;₽</b><em>Твоя временная персональная скидка</em></div>
-    <a class="btn" href="${/ЗАМЕНИТЬ/.test(SITE.buyUrl)?'index.html#price':SITE.buyUrl}">Забрать книгу с практикумом</a>
-    <p class="meta">PDF придёт на почту сразу после оплаты · карта или СБП</p>
-    <a class="more" href="index.html">Посмотреть, что внутри книги →</a>
-  </div>
-  <p class="small">Тест носит развлекательно-образовательный характер и не является психологической диагностикой.</p>`;
-  window.scrollTo(0,0);
+  const r = T.types[leader()];
+  $('rType').textContent = r.name;
+  $('rText').innerHTML = r.text.map(p => `<p>${esc(p)}</p>`).join('');
+  $('rCards').innerHTML = r.cards.map((c, k) => `<div class="rc"><div class="lb">${ICONS[k]}${LABELS[k]}</div><p>${esc(c)}</p></div>`).join('');
+  $('trTitle').textContent = T.trTitle;
+  $('trList').innerHTML = r.pairs.map(([a, b]) => `<div class="tr-row"><div class="tc now"><small>Сейчас</small>${esc(a)}</div><span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><div class="tc new"><small>Станет</small>${esc(b)}</div></div>`).join('');
+  screen('result');
 }
-$('start').onclick = () => { $('intro').classList.add('hidden'); $('quiz').classList.remove('hidden'); show(); };
+$('rBtn').onclick = () => screen('trans');
+$('trBtn').onclick = () => {
+  $('stage').classList.add('hidden'); $('sell').classList.remove('hidden');
+  window.scrollTo({top:0});
+};
+$('start').onclick = () => { screen('quiz'); show(); };
+
+// программа книги
+let n0 = 0;
+$('prg').innerHTML = RULES.map(([s, t, rs], k) => `<details class="sec"${k===0?' open':''}><summary><i>${s}</i><b>${t}</b></summary><ol>${rs.map(x => `<li><span>${++n0}.</span>${esc(x)}</li>`).join('')}</ol></details>`).join('')
+ + `<details class="sec bonus"><summary><i>Бонус</i><b>Практикум на 21 день</b></summary><ol><li>Стартовый тест «с чего начать»</li><li>План на 21 день: одно действие в день</li><li>6 сценариев трудных разговоров слово в слово</li><li>Денежный разбор и трекер</li></ol></details>`;
+
+// ссылки на оплату и документы
+const ready = v => v && !/ЗАМЕНИТЬ|000000000000|ФИО/.test(v);
+if (ready(SITE.buyUrl)) document.querySelectorAll('a.buy').forEach(a => a.href = SITE.buyUrl);
+if (!SITE.docs) $('docs').remove();
+
+// нижняя кнопка на продающей части: прячется у блока с ценой
+(function(){
+  const bar = document.querySelector('.sticky'), price = $('price');
+  function upd(){
+    if ($('sell').classList.contains('hidden')) { bar.classList.remove('on'); return; }
+    const r = price.getBoundingClientRect();
+    bar.classList.toggle('on', window.scrollY > 500 && !(r.top < innerHeight && r.bottom > 0));
+  }
+  addEventListener('scroll', upd, {passive:true});
+})();
 </script>
 </body>
 </html>
