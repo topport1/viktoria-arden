@@ -24,6 +24,26 @@ body{background:var(--dark);color:#efe6d8;min-height:100vh}
 .res .box h3{font-size:28px;margin-bottom:8px}
 .res .center{text-align:center}
 .res .small{font-size:13px;color:#a59683;margin-top:14px;text-align:center}
+.res .pk{border:1px solid #3a2f26;padding:26px;margin:18px 0 10px;background:#211913}
+.res .pk .eyebrow{margin-bottom:8px}
+.res .pk h3{font-size:28px;margin-bottom:10px;color:#efe6d8}
+.res .pk ul{list-style:none;margin:14px 0 18px}
+.res .pk li{padding:9px 0 9px 30px;position:relative;border-top:1px solid #33291f;color:#d6c8b3;font-size:15px}
+.res .pk li b{color:#efe6d8;font-weight:600}
+.res .pk li:before{content:'';position:absolute;left:4px;top:18px;width:12px;height:1px;background:var(--gold)}
+.res .pk .wk{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #3a2f26;margin:6px 0 18px;text-align:center}
+.res .pk .wk div{padding:12px 6px;border-left:1px solid #3a2f26;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a59683}
+.res .pk .wk div:first-child{border-left:0}
+.res .pk .wk b{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;color:var(--gold2);font-weight:500;margin-top:2px}
+.res .pk .math{font-variant-numeric:lining-nums;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.35;color:#efe6d8;border-left:2px solid var(--gold);padding-left:16px;margin:4px 0 22px}
+.res .tpr{text-align:center;margin:8px 0 14px}
+.res .tpr s{color:#8d7f6c;font-size:20px;margin-right:10px}
+.res .tpr b{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:500;color:#efe6d8}
+.res .tpr em{display:block;font-style:normal;font-size:13px;color:var(--gold2);letter-spacing:.06em;margin-top:2px}
+.res .pk .btn{width:100%;text-align:center}
+.res .pk .meta{font-size:13px;color:#a59683;text-align:center;margin-top:12px}
+.res .pk .more{display:block;text-align:center;margin-top:12px;color:var(--gold2);font-size:14px}
+@media(max-width:420px){.res .pk .wk b{font-size:18px}.res .pk{padding:22px 18px}}
 .hidden{display:none}
 </style>
 </head>
@@ -116,9 +136,25 @@ function result(){
   $('quiz').classList.add('hidden');
   $('result').classList.remove('hidden');
   $('result').innerHTML = `<div class="eyebrow">Твой результат</div><div class="type">${r.name}</div>${r.text.map(p=>`<p>${p}</p>`).join('')}
-  <div class="box"><h3>Что с этим делать</h3><p>${r.rules}</p><p>В книге «20 правил женщины, которая стоит дорого» к каждому правилу есть готовая фраза и короткая практика, которую можно сделать уже сегодня.</p>
-  <div class="center" style="margin-top:22px"><a class="btn" href="index.html#price">${/ЗАМЕНИТЬ/.test(SITE.buyUrl)?'Узнать о книге':'Забрать книгу за 990&nbsp;₽'}</a></div></div>
-  <p class="small">Тест носит развлекательно-образовательный характер и не является психологической диагностикой. Виктория Арден — ИИ-персонаж.</p>`;
+  <div class="box"><h3>Что с этим делать</h3><p>${r.rules}</p><p>Прочитать правило легко. Сказать его вслух в нужный момент сложнее. Поэтому в книге к каждому правилу есть готовая фраза, а в конце практикум, который превращает правила в привычку.</p></div>
+  <div class="pk">
+    <div class="eyebrow">Книга + практикум на 21 день</div>
+    <h3>За три недели новые ответы станут твоими</h3>
+    <div class="wk"><div>Неделя 1<b>Замечать</b></div><div>Неделя 2<b>Пробовать</b></div><div>Неделя 3<b>Закреплять</b></div></div>
+    <ul>
+      <li><b>20 правил</b>: мысль, готовая фраза и практика на 10 минут к каждому</li>
+      <li><b>Тест «с чего начать»</b>: покажет, какой раздел нужен тебе первым</li>
+      <li><b>План на 21 день</b>: одно маленькое действие в день</li>
+      <li><b>6 сценариев трудных разговоров</b>: прибавка, цена, отказ, критика близких. Что сказать слово в слово</li>
+      <li><b>Денежный разбор и трекер</b>: видно, где ты работаешь дешевле, чем могла бы, и как меняешься</li>
+    </ul>
+    <p class="math">Посчитай сама. Если один сценарий поможет тебе хоть раз назвать сумму на 1 000 ₽ выше, книга уже окупилась.</p>
+    <div class="tpr"><s>2&nbsp;490&nbsp;₽</s><b>990&nbsp;₽</b><em>Твоя временная персональная скидка</em></div>
+    <a class="btn" href="${/ЗАМЕНИТЬ/.test(SITE.buyUrl)?'index.html#price':SITE.buyUrl}">Забрать книгу с практикумом</a>
+    <p class="meta">PDF придёт на почту сразу после оплаты · карта или СБП</p>
+    <a class="more" href="index.html">Посмотреть, что внутри книги →</a>
+  </div>
+  <p class="small">Тест носит развлекательно-образовательный характер и не является психологической диагностикой.</p>`;
   window.scrollTo(0,0);
 }
 $('start').onclick = () => { $('intro').classList.add('hidden'); $('quiz').classList.remove('hidden'); show(); };
