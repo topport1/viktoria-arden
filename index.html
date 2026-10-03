@@ -167,7 +167,7 @@
 <footer>
   <div class="wrap">
     <div class="serif" style="font-size:22px;color:#efe6d8">Виктория Арден</div>
-    <nav><a href="oferta.html">Договор оферты</a><a href="privacy.html">Политика конфиденциальности</a><a href="refund.html">Возврат и поддержка</a><a class="support" href="#">Поддержка</a></nav>
+    <nav><a href="oferta.html">Договор оферты</a><a href="privacy.html">Политика конфиденциальности</a><a href="refund.html">Возврат и поддержка</a><a class="support" href="#">Поддержка по оплате</a></nav>
     <div class="disc">Материалы носят образовательный и мотивационный характер, не являются финансовой, юридической или психологической консультацией и не гарантируют конкретного результата. <span class="seller"></span></div>
   </div>
 </footer>
@@ -189,14 +189,11 @@ if (ready(SITE.buyUrl)) {
   document.querySelectorAll('.pay').forEach(p=>p.textContent='Продажи откроются в ближайшие дни');
 }
 if (ready(SITE.email)) {
-  document.querySelectorAll('a.support').forEach(a=>{a.href='mailto:'+SITE.email;a.textContent=SITE.email});
+  document.querySelectorAll('a.support').forEach(a=>{a.href='mailto:'+SITE.email});
 } else {
   document.querySelectorAll('a.support').forEach(a=>a.remove());
 }
-if (ready(SITE.seller)) {
-  document.querySelectorAll('.seller').forEach(s=>s.textContent='Продавец: '+SITE.seller+'.');
-} else {
-  // Реквизиты не заполнены: документы пока не показываем
+if (!SITE.docs) {
   document.querySelectorAll('footer nav a, .refund-q').forEach(a=>a.remove());
 }
 </script>

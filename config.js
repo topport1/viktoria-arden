@@ -3,9 +3,9 @@ window.SITE = {
   // Ссылка на оплату книги из lava.top (или Продамус)
   buyUrl: 'https://ЗАМЕНИТЬ-НА-ССЫЛКУ-ОПЛАТЫ',
   // Почта поддержки
-  email: 'support@ЗАМЕНИТЬ.ru',
-  // Продавец: ФИО, статус и ИНН (самозанятый / ИП)
-  seller: 'ФИО, самозанятый, ИНН 000000000000',
+  email: 'support@lava.top',
+  // Документы заполнены: продавец указан как автор проекта на lava.top
+  docs: true,
   // Ссылка на Instagram и Telegram-бота
   instagram: 'https://instagram.com/ЗАМЕНИТЬ',
   telegram: 'https://t.me/ЗАМЕНИТЬ_bot'
